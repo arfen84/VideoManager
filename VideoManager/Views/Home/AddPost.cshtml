@@ -1,0 +1,22 @@
+﻿@model VideoManager.Models.Movie
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <div class="col-md-12">
+            <p>Podaj Id filmu</p>
+            @Html.TextBox("Id",null,"hey")
+            <p>Podaj link do filmu</p>
+            @Html.EditorFor(model=>model.Link)
+            
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+}
